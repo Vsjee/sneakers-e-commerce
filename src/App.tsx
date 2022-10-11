@@ -1,14 +1,9 @@
-import { Card } from './components'
-import { CardWrapper } from './styled-components'
-import './App.css'
+import { NavBar } from './components';
 
 function App() {
   return (
     <>
-      Request the end point
-      <CardWrapper>
-        <Card />
-      </CardWrapper>
+      <NavBar />
     </>
   )
 }
