@@ -6,10 +6,11 @@ interface Props {
 
 function RoutesWithNotFound({children}: Props) {
   return (
-    <Routes > 
+    <Routes> 
       {children}
       <Route path="*" element={<h1>Not found</h1>}/>
     </Routes>
   ) 
 }
+
 export default RoutesWithNotFound
