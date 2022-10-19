@@ -1,1 +1,2 @@
-export { default as SneakerBrands } from './SectionSneaker';
+export { default as SectionSneaker } from './SectionSneaker';
+export * from './styles';
