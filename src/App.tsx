@@ -1,10 +1,12 @@
-import { NavBar } from './components';
+import AppWrapper from './app.style';
+import { Footer, NavBar } from './components';
 
 function App() {
   return (
-    <>
+    <AppWrapper>
       <NavBar />
-    </>
+      <Footer />
+    </AppWrapper>
   )
 }
 
