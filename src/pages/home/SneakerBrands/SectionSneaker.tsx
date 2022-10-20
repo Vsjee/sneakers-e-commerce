@@ -1,4 +1,5 @@
 import { data } from "@/data"
+import { Link } from "react-router-dom"
 import SectionSneakerWrapper from './styles/SneakerSection'
 
 let listBrands = [
@@ -25,13 +26,17 @@ const SectionSneaker = () => {
       {
         listSneakerHome.map((i:any) => {
           return (
-            <article key={i.id}>
-              <figure>  
-                <img src={i.main_picture_url} alt="Sneaker-img"  width={500}/>
-              </figure>
+            <article key={i.id}>               
+              <Link to={`/products/${i.id}`}>
+                <figure> 
+                  <img src={i.main_picture_url} alt="Sneaker-img"  width={500}/>
+                </figure>
+              </Link>
               <div>
                 <h1>{i.silhouette}</h1>
-                <button>Ver</button>
+                <Link to={`/products/${i.id}`}>
+                  <button>Ver</button>
+                </Link>
               </div>
             </article>
           )

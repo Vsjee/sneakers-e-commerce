@@ -2,7 +2,7 @@ import sneakerLogo from '../../assets/sneakerLogo.svg'
 import { NavBarWrapper } from '@/styled-components'
 import { Link, Route } from 'react-router-dom'
 import { RoutesWithNotFound } from '@/utilities'
-import { Products, HomePage, About, Contact } from '@/pages'
+import { Products, HomePage, About, Contact, SneakerInfo } from '@/pages'
 
 const NavBar = () => {
    
@@ -43,7 +43,7 @@ const NavBar = () => {
       <RoutesWithNotFound>
         <Route path='/' element={<HomePage />}/>
         <Route path='/products' element={<Products />}/>
-        <Route path='/products/:id' element={<h1>SNEAKER</h1>}/>
+        <Route path='/products/:id' element={<SneakerInfo />}/>
         <Route path='/about' element={<About />}/>
         <Route path='/contact' element={<Contact />}/>
       </RoutesWithNotFound>
