@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const SectionSneakerWrapper = styled.section`
-  margin: 5rem 0 5rem 0;
+  margin: 5rem 5% 5rem 5%;
 
   article {
     display: flex;
@@ -17,25 +17,17 @@ const SectionSneakerWrapper = styled.section`
     gap: 2rem;
   }
 
-  article:first-child {
-    flex-direction: row-reverse;
-  }
-  article:nth-child(3) {
-    flex-direction: row-reverse;
-  }
-  article:nth-child(5) {
-    flex-direction: row-reverse;
-  }
+  article:first-child, 
+  article:nth-child(3),
+  article:nth-child(5),
   article:last-child {
     flex-direction: row-reverse;
   }
 
   @media screen and (max-width: 828px) {
-    article figure {
+    article figure img {
       display: block;
       margin: 0 auto;
-    }
-    article figure img {
       width: 320px;
     }
     article {
@@ -44,20 +36,12 @@ const SectionSneakerWrapper = styled.section`
     article div {
       display: flex;
     }
-
-    article:first-child {
-      flex-direction: column;
-    }
-    article:nth-child(3) {
-      flex-direction: column;
-    }
-    article:nth-child(5) {
-      flex-direction: column;
-    }
+    article:first-child, 
+    article:nth-child(3),
+    article:nth-child(5),
     article:last-child {
       flex-direction: column;
     }
-
   }
 `
 
