@@ -1,3 +1,4 @@
+import { Button } from "@/components"
 import { data } from "@/data"
 import { Link } from "react-router-dom"
 import SectionSneakerWrapper from './styles/SneakerSection'
@@ -18,8 +19,6 @@ for (let item = 0; item<listBrands.length; item++) {
   listSneakerHome.push({...data.sneakers.find(i => i.brand_name === listBrands[item])})
 }
 
-console.log(listSneakerHome);
-
 const SectionSneaker = () => {
   return (
     <SectionSneakerWrapper>
@@ -35,7 +34,7 @@ const SectionSneaker = () => {
               <div>
                 <h1>{i.silhouette}</h1>
                 <Link to={`/products/${i.id}`}>
-                  <button>Ver</button>
+                  <Button buttonType="primary">Ver</Button>
                 </Link>
               </div>
             </article>

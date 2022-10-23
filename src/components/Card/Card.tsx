@@ -1,5 +1,6 @@
 import { data } from '@/data';
 import { Link } from 'react-router-dom';
+import Button from '../Button/Button';
 
 const Card = () => {
   return (
@@ -38,7 +39,7 @@ const Card = () => {
               </li>
               <li>
                <Link to="/products/:id ">
-                  <button>Buy</button>
+                  <Button buttonType=''>Buy</Button>
                 </Link>
               </li>
             </ul>
