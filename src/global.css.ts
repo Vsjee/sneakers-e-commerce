@@ -23,14 +23,15 @@ const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
   }
-
+  
   a {
     font-weight: 500;
-    color: #646cff;
+    color: #fff;
     text-decoration: inherit;
+    transition: .4s ease-in-out;
   }
   a:hover {
-    color: #535bf2;
+    color: #fc4747;
   }
 
   h1 {
@@ -45,29 +46,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1em;
     font-weight: 500;
     font-family: inherit;
-    background-color: #1a1a1a;
     cursor: pointer;
-    transition: border-color 0.25s;
-  }
-  button:hover {
-    border-color: #646cff;
-  }
-  button:focus,
-  button:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
-  }
-
-  @media (prefers-color-scheme: light) {
-    :root {
-      color: #213547;
-      background-color: #ffffff;
-    }
-    a:hover {
-      color: #747bff;
-    }
-    button {
-      background-color: #f9f9f9;
-    }
   }
 `
 
