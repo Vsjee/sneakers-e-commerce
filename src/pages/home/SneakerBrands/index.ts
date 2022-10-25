@@ -1,2 +1,3 @@
 export { default as SectionSneaker } from './SectionSneaker';
-export * from './styles';
+export { default as SneakerSection } from './SneakerSection.css';
+export * from './index';

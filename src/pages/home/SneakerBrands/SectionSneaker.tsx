@@ -1,7 +1,7 @@
 import { Button } from "@/components"
 import { data } from "@/data"
 import { Link } from "react-router-dom"
-import SectionSneakerWrapper from './styles/SneakerSection'
+import SectionSneakerWrapper from './SneakerSection.css'
 
 let listBrands = [
   'Air Jordan',
