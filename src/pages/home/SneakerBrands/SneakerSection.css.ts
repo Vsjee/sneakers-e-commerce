@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const SectionSneakerWrapper = styled.section`
   margin: 0 5% 0 5%;
+  margin-top: 6rem;
 
   article {
     display: flex;
