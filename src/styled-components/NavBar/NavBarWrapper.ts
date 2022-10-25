@@ -8,6 +8,11 @@ const NavBarWrapper = styled.header`
   color: #fff;
   padding: .6rem 0 .6rem 0;
 
+  position: fixed;
+  width: 100%;
+
+  z-index: 1;
+
   nav ul {
     list-style: none;
     display: flex;

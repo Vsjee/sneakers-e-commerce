@@ -9,6 +9,10 @@ const SneakerSliderWrapper = styled.section`
   text-align: center;
   border-top: 2px solid black;
 
+  .swiper--zIndex {
+    z-index: 0; 
+  }
+
   article {
     margin: 2rem 2%;
   }
