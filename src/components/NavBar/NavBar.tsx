@@ -1,9 +1,9 @@
 import sneakerLogo from '../../assets/sneakerLogo.svg'
 import { lazy, Suspense } from 'react'
-import { NavBarWrapper } from '@/styled-components'
 import { Link, Route } from 'react-router-dom'
 import { RoutesWithNotFound } from '@/utilities'
 import Button from '../Button/Button'
+import NavBarWrapper from './NavBarWrapper.css'
 
 const HomePage = lazy(() => import('../../pages/home/HomePage'))
 const Products = lazy(() => import('../../pages/products/Products'))

@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom"
 import { data } from "@/data"
-import SneakerInfoWrapper from "./styles/SneakerInfoWrapper"
+import SneakerInfoWrapper from "./SneakerInfoWrapper.css"
 
 function SneakerInfo() {
 

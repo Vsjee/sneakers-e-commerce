@@ -1,7 +1,7 @@
 import { SneakerBuy } from "./SneakerBuy";
 import { SneakerInfo } from "./SneakerInfo";
 import { SneakerSlider } from "./SneakersSlider";
-import SneakerProductWrapper from "./styles/SneakerProductWrapper";
+import SneakerProductWrapper from "./SneakerProductWrapper.css";
 
 function SneakerProduct() {
   return (

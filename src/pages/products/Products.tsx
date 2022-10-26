@@ -1,13 +1,12 @@
 import { Card } from '@/components'
-import { CardWrapper } from '@/styled-components'
+import ProductsWrapper from './ProductsWrapper.css'
 
 const Products = () => {
   return (
     <>
-    <h1>PRODUCTS PAGE</h1>
-      <CardWrapper>
+      <ProductsWrapper>
         <Card />
-      </CardWrapper> 
+      </ProductsWrapper> 
     </>
   )
 }
