@@ -1,9 +1,15 @@
 import sneakerLogo from '../../assets/sneakerLogo.svg'
+import { lazy, Suspense } from 'react'
 import { NavBarWrapper } from '@/styled-components'
 import { Link, Route } from 'react-router-dom'
 import { RoutesWithNotFound } from '@/utilities'
-import { HomePage, Products, SneakerProduct, About, Contact } from '@/pages'
 import Button from '../Button/Button'
+
+const HomePage = lazy(() => import('../../pages/home/HomePage'))
+const Products = lazy(() => import('../../pages/products/Products'))
+const SneakerProduct = lazy(() => import('../../pages/sneakerProduct/SneakerProduct'))
+const About = lazy(() => import('../../pages/about/About'))
+const Contact = lazy(() => import('../../pages/Contact/Contact'))
 
 const NavBar = () => {
   return (
@@ -30,11 +36,31 @@ const NavBar = () => {
         </NavBarWrapper>
 
       <RoutesWithNotFound>
-        <Route path='/' element={<HomePage />}/>
-        <Route path='/products' element={<Products />}/>
-        <Route path='/products/:id' element={<SneakerProduct />}/>
-        <Route path='/about' element={<About />}/>
-        <Route path='/contact' element={<Contact />}/>
+          <Route path='/' element={
+            <Suspense fallback='Loading...'>
+              <HomePage />
+            </Suspense>
+          }/>
+          <Route path='/products' element={
+            <Suspense fallback='Loading...'>
+              <Products />
+            </Suspense>
+          }/>
+          <Route path='/products/:id' element={
+            <Suspense fallback='Loading...'>
+              <SneakerProduct />
+            </Suspense>
+          }/>
+          <Route path='/about' element={
+            <Suspense fallback='Loading...'>
+              <About />
+            </Suspense>
+          }/>
+          <Route path='/contact' element={
+            <Suspense fallback='Loading...'>
+              <Contact />
+            </Suspense>
+          }/>
       </RoutesWithNotFound>
     </>
   )
