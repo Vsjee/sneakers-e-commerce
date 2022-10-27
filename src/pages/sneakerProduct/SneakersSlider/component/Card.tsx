@@ -1,5 +1,7 @@
 import { Button } from "@/components";
 import CardWrapper  from "./CardWrapper.css";
+import { Link } from 'react-router-dom'
+import { ScrollToTop } from "@/utilities";
 
 interface Props {
   item: {
@@ -12,10 +14,14 @@ interface Props {
 function Card(item: Props) {
   return (
     <CardWrapper> 
+      <ScrollToTop />
       <img src={item.item.main_picture_url} alt="name" width={200}/>
       <p style={{fontWeight: 'bold'}}>{item.item.nickname}</p>
-      <Button buttonType="">More info.</Button>
+        <Link to={`/products/${item.item.id}`}>
+          <Button buttonType="">More info.</Button>
+        </Link>
     </CardWrapper>
   )
 }
+
 export default Card
