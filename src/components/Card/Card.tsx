@@ -1,4 +1,5 @@
 import { data } from '@/data';
+import centsToUsd from '@/utilities/centsToUsd';
 import { Link } from 'react-router-dom';
 import Button from '../Button/Button';
 
@@ -33,12 +34,12 @@ const Card = () => {
                 }
               </li>
               <li>
-                {
-                  item.retail_price_cents
-                } cents
+                ${
+                  centsToUsd(Number(item?.retail_price_cents))
+                }
               </li>
               <li>
-               <Link to="/products/:id ">
+               <Link to="/products/:id">
                   <Button buttonType=''>Buy</Button>
                 </Link>
               </li>
