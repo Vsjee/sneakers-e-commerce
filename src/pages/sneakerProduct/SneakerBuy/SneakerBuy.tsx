@@ -20,7 +20,7 @@ function SneakerBuy() {
   return (
     <SneakerBuyWrapper>
       <article className="sizes">
-        <h2>
+        <h2 className="sizes__price">
           Price: $ {
             centsToUsd(Number(info?.retail_price_cents))
           }

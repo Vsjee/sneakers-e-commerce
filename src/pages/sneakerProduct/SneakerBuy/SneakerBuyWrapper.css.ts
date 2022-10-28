@@ -3,6 +3,14 @@ import styled from "styled-components";
 const SneakerBuyWrapper = styled.section`
   width:  40%;
 
+  .sizes__price {
+    display: block;
+    width: 100%;
+    text-align: left;
+    border-bottom: 2px solid black;
+    padding: 0 0 1rem 0;
+  }
+
   .sizes {
     display: flex;
     flex-direction: column;
