@@ -24,14 +24,13 @@ function SneakerSlider() {
       listSameTypeSneakers.push({...i})
     }
   })
-
-  listSameTypeSneakers.map((i:any) => console.log(i))
   
   return (
     <SneakerSliderWrapper>
       <article>
         <h2>Others</h2>
         <Swiper
+        className='swiper--zIndex'
         loop={true}
         centeredSlides={true}
         navigation={true}
@@ -41,9 +40,6 @@ function SneakerSlider() {
           delay: 3000,
           disableOnInteraction: false
         }}
-        // pagination={{
-        //   clickable: true,
-        // }}
         slidesPerView={3}
         breakpoints={{
           "@0.00": {

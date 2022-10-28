@@ -1,8 +1,13 @@
 export * from './Contact';
 export * from './about';
 export * from './home/SneakerBrands';
-export * from './home/SneakerBrands/styles';
 export * from './home';
+export * from './index';
 export * from './products';
+export * from './sneakerProduct/SneakerBuy/components';
+export * from './sneakerProduct/SneakerBuy';
 export * from './sneakerProduct/SneakerInfo';
+export { default as Card } from './sneakerProduct/SneakersSlider/component/Card';
+export { default as CardWrapper } from './sneakerProduct/SneakersSlider/component/CardWrapper.css';
+export * from './sneakerProduct/SneakersSlider';
 export * from './sneakerProduct';

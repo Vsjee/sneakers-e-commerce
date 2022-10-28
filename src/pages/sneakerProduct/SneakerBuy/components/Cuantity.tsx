@@ -1,5 +1,5 @@
 import { useState } from "react"
-import CuantityWrapper from "./CuantityWrapper"
+import CuantityWrapper from "./CuantityWrapper.css"
 
 const useCuantitySelector = () => {
 
