@@ -29,7 +29,7 @@ const SectionSneakerWrapper = styled.section`
     article figure img {
       display: block;
       margin: 0 auto;
-      width: 320px;
+      width: 300px;
     }
     article {
       flex-direction: column;
