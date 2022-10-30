@@ -1,13 +1,12 @@
 import styled from "styled-components";
 
 const ContactFormWrapper = styled.form`
-  margin-top: 5rem;
   margin-bottom: 5rem;
+  margin-top: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
   gap: 1rem;
   
   .form__input,
@@ -36,11 +35,17 @@ const ContactFormWrapper = styled.form`
   }
 
   @media screen and (max-width: 460px) {
+    width: 100%;
     transition: .4s ease-in-out;
+
     .form__input,
     .form__textarea {
       width: 90%;
     }
+  }
+
+  @media screen and (max-width: 954px) {
+    margin-top: 1rem;
   }
 `
 

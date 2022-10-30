@@ -22,7 +22,6 @@ const ContactForm = () => {
 
   return (
     <ContactFormWrapper action="" className="form">
-      <h1>contact form</h1>
       <input type="text" className="form__input" placeholder="Your first name" name="firstName" onChange={handleForm} required/>
       <input type="text" className="form__input" placeholder="Your last name" name="lastName" onChange={handleForm} required/>
       <input type="email" className="form__input" placeholder="Your email" name="email" onChange={handleForm} required/>
