@@ -28,7 +28,7 @@ const SectionSneaker = () => {
             <article key={i.id}>               
               <Link to={`/products/${i.id}`}>
                 <figure> 
-                  <img src={i.main_picture_url} alt="Sneaker-img"  width={500}/>
+                  <img src={i.main_picture_url} alt="Sneaker-img"  width={500} className="sneaker__img"/>
                 </figure>
               </Link>
               <div>
