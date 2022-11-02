@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
   }
   
   body {
-    font-size: 16px;
+    font-size: 1.1rem;
     line-height: 24px;
     font-weight: 400;
     
@@ -36,15 +36,15 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
-    font-size: 3.2em;
+    font-size: 3.2rem;
     line-height: 1.1;
   }
 
   button {
     border-radius: 8px;
     border: 1px solid transparent;
-    padding: 0.6em 1.2em;
-    font-size: 1em;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
     font-weight: 500;
     font-family: inherit;
     cursor: pointer;
