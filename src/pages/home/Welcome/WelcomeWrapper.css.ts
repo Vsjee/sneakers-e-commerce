@@ -1,6 +1,16 @@
 import styled from "styled-components";
 
 const WelcomeWrapper = styled.section`
+  @keyframes background-pan {
+    from {
+      background-position: 0% center;
+    }
+
+    to {
+      background-position: -200% center;
+    }
+  }
+
   background-color: red;
   margin-top: 4rem;
 
@@ -20,6 +30,18 @@ const WelcomeWrapper = styled.section`
     text-align: center;
     color: white;
     font-size: 3rem;
+
+    span {
+      animation: background-pan 4s linear infinite;
+      background: linear-gradient(
+        90deg, #fc4747, #fff, #fc4747, #fff, #fc4747 
+      );
+      background-size: 200%;
+      background-clip: border-box;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      white-space: nowrap;
+    }
   }
 
   .downBtn {

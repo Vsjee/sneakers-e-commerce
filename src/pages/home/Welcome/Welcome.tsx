@@ -12,7 +12,7 @@ function Welcome() {
   return (
     <WelcomeWrapper>
       <div>
-        <h1 className="shopTitle">SNEAK SHOP</h1>
+        <h1 className="shopTitle">SNEAK <span>SHOP</span></h1>
         <button className="downBtn">
           <FaAngleDown className="downBtn__icon" onClick={goDown}/>
         </button>

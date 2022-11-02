@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <FooterWrapper>
       <h1>
-        Sneak<span className="magic">Shop</span>
+        Sneak <span className="magic">Shop</span>
       </h1>
       <article className="accounts">
         <ul>

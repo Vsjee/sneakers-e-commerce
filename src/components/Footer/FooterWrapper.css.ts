@@ -17,11 +17,12 @@ const FooterWrapper = styled.footer`
   background-color: #fc4747;
 
   h1 > .magic {
-    animation: background-pan 3s linear infinite;
+    animation: background-pan 4s linear infinite;
     background: linear-gradient(
       90deg, #000, #fff, #000, #fff, #000
     );
     background-size: 200%;
+    background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     white-space: nowrap;
