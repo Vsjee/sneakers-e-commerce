@@ -3,4 +3,4 @@ export * from './Card';
 export * from './ContactForm';
 export * from './Footer';
 export * from './NavBar';
-export * from './index';
+export * from './ShopCart';

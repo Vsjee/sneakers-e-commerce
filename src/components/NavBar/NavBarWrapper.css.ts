@@ -24,6 +24,42 @@ const NavBarWrapper = styled.header`
     display: block;
     cursor: pointer;
   }
+
+  .shopIcon {
+    background: none;
+    border: none;
+    padding: 0;
+    width: 25px;
+    height: 25px;
+
+    .shopIcon--icon {
+      width: 25px;
+      height: 25px;
+      color: white;
+      transition: .3s ease-in-out;
+      
+      &:hover {
+        color: #fc4747;
+      }
+    }
+
+    
+    .shopIcon_counter {
+      position: relative;
+      top: -150%;
+      left: 80%;
+      width: 18px;
+      height: 18px;
+      color: #fff;
+      border-radius: 20px;
+      background-color: #fc4747;
+
+      span {
+        position: relative;
+        bottom: 3px;
+      }
+    }
+  }
 `
 
 export default NavBarWrapper
