@@ -27,12 +27,6 @@ const NavBar = () => {
         </Link>
         <nav>
           <ul>
-            <Button onClick={() => setToggleDrawer(true)} buttonType="" className='shopIcon'>
-              <AiOutlineShoppingCart className='shopIcon--icon'/>
-              <div className='shopIcon_counter'>
-                <span>0</span>
-              </div>
-            </Button>
             <Link to='/products'>
               Products
             </Link>
@@ -42,6 +36,12 @@ const NavBar = () => {
             <Link to='/contact'>
               <Button buttonType='primary'>Contact</Button>
             </Link>
+            <Button onClick={() => setToggleDrawer(true)} buttonType="" className='shopIcon'>
+              <AiOutlineShoppingCart className='shopIcon--icon'/>
+              <div className='shopIcon_counter'>
+                <span>0</span>
+              </div>
+            </Button>
           </ul>
         </nav>
       </NavBarWrapper>

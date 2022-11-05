@@ -26,6 +26,7 @@ const NavBarWrapper = styled.header`
   }
 
   .shopIcon {
+    margin-left: 15px;
     background: none;
     border: none;
     padding: 0;
