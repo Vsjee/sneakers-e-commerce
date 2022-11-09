@@ -1,10 +1,10 @@
 export * from './Contact';
 export * from './about';
 export * from './home/SneakerBrands';
+export * from './home/Welcome';
 export * from './home';
-export * from './index';
 export * from './products';
-export * from './sneakerProduct/SneakerBuy/components';
+export { default as ProductSearchWrapper } from './products/productsSearch/ProductSearchWrapper.css';
 export * from './sneakerProduct/SneakerBuy';
 export * from './sneakerProduct/SneakerInfo';
 export { default as Card } from './sneakerProduct/SneakersSlider/component/Card';
