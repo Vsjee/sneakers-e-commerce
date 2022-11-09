@@ -1,8 +1,8 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
 const CuantityWrapper = styled.ul`
   display: flex;
-  gap: .5rem;
+  gap: 0.5rem;
   border-bottom: 2px solid black;
 
   .btn {
@@ -11,8 +11,8 @@ const CuantityWrapper = styled.ul`
     color: #000;
     font-size: 25px;
     padding: 3px;
-    transition: .4s ease-in-out;
-    
+    transition: 0.4s ease-in-out;
+
     &:hover {
       background-color: #e6e6e6;
     }
@@ -30,19 +30,19 @@ const CuantityWrapper = styled.ul`
     text-align: center;
   }
 
-  input[type="number"]::-webkit-inner-spin-button,
-  input[type="number"]::-webkit-outer-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
 
-  input[type="number"] {
-      -moz-appearance: textfield;
+  input[type='number'] {
+    -moz-appearance: textfield;
   }
 
   input:focus {
-      outline: 0;
+    outline: 0;
   }
-`
+`;
 
-export default CuantityWrapper
+export default CuantityWrapper;
