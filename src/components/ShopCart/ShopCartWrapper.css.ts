@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const ShopCartWrapper = styled.section`
   .cart {
@@ -7,7 +7,7 @@ const ShopCartWrapper = styled.section`
     height: 100vh;
     padding: 1rem;
   }
-  
+
   .cart__header {
     display: flex;
     justify-content: space-around;
@@ -29,8 +29,8 @@ const ShopCartWrapper = styled.section`
 
         width: 25px;
         height: 25px;
-        transition: .3s ease-in-out;
-        
+        transition: 0.3s ease-in-out;
+
         &:hover {
           color: #fc4747;
         }
@@ -41,16 +41,16 @@ const ShopCartWrapper = styled.section`
   .cart_checkout {
     position: fixed;
     top: 90vh;
-    width: 200px;
+    width: 150px;
     margin-top: 0 auto;
     align-self: center;
   }
 
   @media screen and (max-width: 425px) {
-    .cart{ 
+    .cart {
       width: 100vw;
     }
   }
-`
+`;
 
-export default ShopCartWrapper
+export default ShopCartWrapper;

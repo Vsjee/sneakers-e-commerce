@@ -1,11 +1,7 @@
-export * from './SneakerBuy/components';
 export * from './SneakerBuy';
-export { default as SneakerBuyWrapper } from './SneakerBuy/SneakerBuyWrapper.css';
 export * from './SneakerInfo';
-export { default as SneakerInfoWrapper } from './SneakerInfo/SneakerInfoWrapper.css';
 export { default as SneakerProduct } from './SneakerProduct';
 export { default as SneakerProductWrapper } from './SneakerProductWrapper.css';
 export { default as Card } from './SneakersSlider/component/Card';
 export { default as CardWrapper } from './SneakersSlider/component/CardWrapper.css';
 export * from './SneakersSlider';
-export * from './index';

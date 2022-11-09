@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const SneakerBuyWrapper = styled.section`
-  width:  40%;
+  width: 40%;
 
   .sizes__price {
     display: block;
@@ -25,9 +25,9 @@ const SneakerBuyWrapper = styled.section`
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-  }  
+  }
 
-  input[type="radio"] {
+  input[type='radio'] {
     display: none;
   }
 
@@ -43,8 +43,8 @@ const SneakerBuyWrapper = styled.section`
     cursor: pointer;
   }
 
-  input[type="radio"]:checked + label {
-    transition: .3s ease-in-out;
+  input[type='radio']:checked + label {
+    transition: 0.3s ease-in-out;
     background-color: black;
     color: #fff;
   }
@@ -59,6 +59,6 @@ const SneakerBuyWrapper = styled.section`
   @media screen and (max-width: 712px) {
     width: 100%;
   }
-`
+`;
 
-export default SneakerBuyWrapper
+export default SneakerBuyWrapper;

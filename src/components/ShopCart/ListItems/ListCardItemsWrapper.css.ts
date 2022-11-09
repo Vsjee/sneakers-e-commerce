@@ -1,8 +1,7 @@
-import styled from "styled-components";
-
+import styled from 'styled-components';
 
 const ListCardItemsWrapper = styled.article`
-  background-color: rebeccapurple;
-`
+  padding: 0 0 60px 0;
+`;
 
-export default ListCardItemsWrapper
+export default ListCardItemsWrapper;
