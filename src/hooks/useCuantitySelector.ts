@@ -1,10 +1,10 @@
 import { useState } from 'react';
 
 const useCuantitySelector = () => {
-  const [cuantity, setCuantity] = useState(0);
+  const [cuantity, setCuantity] = useState(1);
 
   const increment = () => setCuantity(() => cuantity + 1);
-  const decrement = () => setCuantity(() => (cuantity > 0 ? cuantity - 1 : 0));
+  const decrement = () => setCuantity(() => (cuantity > 1 ? cuantity - 1 : 1));
 
   return {
     cuantity,
