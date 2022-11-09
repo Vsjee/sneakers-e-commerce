@@ -1,7 +1,6 @@
 import sneakerLogo from '../../assets/sneakerLogo.svg';
-import { lazy, Suspense, useState, createRef } from 'react';
-import { Link, Route } from 'react-router-dom';
-import { RoutesWithNotFound } from '@/utilities';
+import { useState, createRef } from 'react';
+import { Link } from 'react-router-dom';
 import Button from '../Button/Button';
 import NavBarWrapper from './NavBarWrapper.css';
 import { ShopCart } from '../ShopCart';
@@ -9,12 +8,6 @@ import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { FaTimes, FaBars } from 'react-icons/fa';
 import { useSelector } from 'react-redux';
 import { ItemProps } from '@/redux/state/cart';
-
-const HomePage = lazy(() => import('../../pages/home/HomePage'));
-const Products = lazy(() => import('../../pages/products/Products'));
-const SneakerProduct = lazy(() => import('../../pages/sneakerProduct/SneakerProduct'));
-const About = lazy(() => import('../../pages/about/About'));
-const Contact = lazy(() => import('../../pages/Contact/Contact'));
 
 const NavBar = () => {
   const itemCounter = useSelector((store: ItemProps) => store.itemsCounter);
@@ -70,49 +63,6 @@ const NavBar = () => {
       </NavBarWrapper>
 
       {toggleDrawer && <ShopCart onClose={setToggleDrawer} />}
-
-      <RoutesWithNotFound>
-        <Route
-          path="/"
-          element={
-            <Suspense fallback="Loading...">
-              <HomePage />
-            </Suspense>
-          }
-        />
-        <Route
-          path="/products"
-          element={
-            <Suspense fallback="Loading...">
-              <Products />
-            </Suspense>
-          }
-        />
-        <Route
-          path="/products/:id"
-          element={
-            <Suspense fallback="Loading...">
-              <SneakerProduct />
-            </Suspense>
-          }
-        />
-        <Route
-          path="/about"
-          element={
-            <Suspense fallback="Loading...">
-              <About />
-            </Suspense>
-          }
-        />
-        <Route
-          path="/contact"
-          element={
-            <Suspense fallback="Loading...">
-              <Contact />
-            </Suspense>
-          }
-        />
-      </RoutesWithNotFound>
     </>
   );
 };
