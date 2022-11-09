@@ -4,6 +4,7 @@ const ShopCartWrapper = styled.section`
   .cart {
     display: flex;
     flex-direction: column;
+    width: 300px;
     height: 100vh;
     padding: 1rem;
   }
@@ -38,12 +39,16 @@ const ShopCartWrapper = styled.section`
     }
   }
 
-  .cart_checkout {
+  .cart__checkout {
     position: fixed;
-    top: 90vh;
-    width: 150px;
-    margin-top: 0 auto;
     align-self: center;
+    width: 200px;
+    height: 50px;
+    top: 90vh;
+
+    .cart_checkout--btn {
+      width: 200px;
+    }
   }
 
   @media screen and (max-width: 425px) {

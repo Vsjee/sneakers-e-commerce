@@ -5,12 +5,14 @@ import ShopCartWrapper from './ShopCartWrapper.css';
 import { ListCartItems } from './ListItems';
 import { useSelector } from 'react-redux';
 import { ItemProps } from '@/redux/state/cart';
+import { Link } from 'react-router-dom';
 
 interface Props {
   onClose: Function;
 }
 
 const ShopCart = (Props: Props) => {
+  const listCart = useSelector((store: ItemProps) => store.cart);
   const itemCounter = useSelector((store: ItemProps) => store.itemsCounter);
   const itemTotalPrice = useSelector((store: ItemProps) => store.totalPrice);
 
@@ -28,9 +30,13 @@ const ShopCart = (Props: Props) => {
           </div>
           <h3>Total items {itemCounter}</h3>
           <ListCartItems />
-          <Button buttonType="" className="cart_checkout">
-            Checkout
-          </Button>
+          <div className="cart__checkout">
+            <Link to={listCart.length !== 0 ? '/checkout' : `/products`}>
+              <Button buttonType="" className="cart_checkout--btn" onClick={() => Props.onClose(false)}>
+                Checkout
+              </Button>
+            </Link>
+          </div>
         </article>
       </ShopCartWrapper>
     </Drawer>
