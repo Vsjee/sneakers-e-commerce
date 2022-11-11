@@ -36,10 +36,11 @@ export const cartSlice = createSlice({
     },
     removeItemFormCart: (state, actions) => {
       const test = state.cart.findIndex((item) => item.id === actions.payload.id);
-      console.log(test);
-
-      state.cart.pop();
-      console.log(actions.payload.id);
+      if (test > 0) {
+        state.cart.splice(test, test);
+      } else {
+        state.cart.shift();
+      }
       state.itemsCounter--;
     },
     itemsCartCounter: (state) => {
