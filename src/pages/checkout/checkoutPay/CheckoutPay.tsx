@@ -1,14 +1,19 @@
 import { Button } from '@/components';
+import { ItemProps } from '@/redux/state/cart';
 import { FaApplePay, FaGooglePay, FaMoneyBillWave, FaMoneyCheckAlt, FaPaypal } from 'react-icons/fa';
+import { useSelector } from 'react-redux';
 import CheckoutPayWrapper from './CheckoutPayWrapper.css';
 
 function CheckoutPay() {
+  const itemsCounter = useSelector((store: ItemProps) => store.itemsCounter);
+  const totalPrice = useSelector((store: ItemProps) => store.totalPrice);
+
   return (
     <CheckoutPayWrapper>
       <div className="pay__header">
-        <p>Total items [0]</p>
+        <p>Total items {itemsCounter}</p>
         <h2>
-          TOTAL PRICE <span>$[0]</span>
+          TOTAL PRICE <span>${totalPrice}</span>
         </h2>
       </div>
       <ul className="pay__info">
