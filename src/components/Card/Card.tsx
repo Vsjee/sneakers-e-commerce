@@ -20,7 +20,7 @@ interface Props {
 }
 
 const Card = ({ dataItem }: Props) => {
-  const [selectSize, setSelectedSize] = useState(11);
+  const [selectSize, setSelectedSize] = useState(dataItem.size_range[0]);
 
   const usd = centsToUsd(Number(dataItem.retail_price_cents));
 
@@ -62,10 +62,8 @@ const Card = ({ dataItem }: Props) => {
         <li className="info">Category: {dataItem.category}</li>
         <li className="sizes">
           {
-            <select name="sizes">
-              <option value={selectSize} onChange={handleChange}>
-                Select
-              </option>
+            <select name="sizes" onChange={handleChange}>
+              <option value={selectSize}>Select</option>
               {dataItem.size_range.map((sized) => {
                 return (
                   <option value={sized} key={sized}>
