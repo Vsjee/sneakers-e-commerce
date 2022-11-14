@@ -1,5 +1,6 @@
 export * from './Contact';
 export * from './about';
+export * from './checkout/checkoutItems/checkoutItemsCard';
 export * from './checkout/checkoutItems';
 export * from './checkout/checkoutPay';
 export * from './checkout';

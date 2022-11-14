@@ -1,6 +1,9 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const CardWrapper = styled.article`
+  position: relative;
+  overflow: hidden;
+
   ul {
     width: 300px;
     height: 400px;
@@ -15,9 +18,39 @@ const CardWrapper = styled.article`
     border-radius: 20px;
   }
 
-  li {
-    color: black
+  .name {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
   }
-`
 
-export default CardWrapper
+  .price {
+    font-size: 1.3rem;
+    position: absolute;
+    top: 40px;
+    left: 250px;
+  }
+
+  .sizes {
+    position: absolute;
+    right: 40px;
+
+    select {
+      color: #000;
+      background-color: #fff;
+    }
+  }
+
+  .info {
+    color: black;
+    width: 90%;
+    text-align: start;
+  }
+
+  .buy__button {
+    margin-top: 1rem;
+  }
+`;
+
+export default CardWrapper;
