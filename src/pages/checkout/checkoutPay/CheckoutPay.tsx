@@ -2,6 +2,7 @@ import { Button } from '@/components';
 import { ItemProps } from '@/redux/state/cart';
 import { FaApplePay, FaGooglePay, FaMoneyBillWave, FaMoneyCheckAlt, FaPaypal } from 'react-icons/fa';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import CheckoutPayWrapper from './CheckoutPayWrapper.css';
 
 function CheckoutPay() {
@@ -23,9 +24,11 @@ function CheckoutPay() {
           </Button>
         </li>
         <li>
-          <Button buttonType="" className="pay__info--btn">
-            keep shopping
-          </Button>
+          <Link to={'/products'} className="pay__info__a">
+            <Button buttonType="" className="pay__info--btn">
+              keep shopping
+            </Button>
+          </Link>
         </li>
         <li className="pay__info__cupon">
           <input type="text" placeholder="cupon" className="pay__info__cupon--input" />

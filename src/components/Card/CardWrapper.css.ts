@@ -4,6 +4,20 @@ const CardWrapper = styled.article`
   position: relative;
   overflow: hidden;
 
+  .img__span {
+    color: #000;
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    opacity: 0;
+    transition: 0.7s ease;
+    padding: 0.2rem;
+  }
+
+  .img:has(.img__span):hover .img__span {
+    opacity: 1;
+  }
+
   ul {
     width: 300px;
     height: 400px;
@@ -35,6 +49,7 @@ const CardWrapper = styled.article`
   .sizes {
     position: absolute;
     right: 40px;
+    top: 190px;
 
     select {
       color: #000;

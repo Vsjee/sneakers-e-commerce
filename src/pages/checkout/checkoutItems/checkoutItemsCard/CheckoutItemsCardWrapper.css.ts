@@ -3,11 +3,17 @@ import styled from 'styled-components';
 const CheckoutItemsCardWrapper = styled.article`
   .itemContainer {
     display: flex;
+    position: relative;
     justify-content: space-evenly;
     align-items: center;
     margin: 0 10%;
-
     border-bottom: 1px solid black;
+  }
+
+  .itemContainer__counter {
+    position: absolute;
+    left: 10px;
+    top: 10px;
   }
 
   .itemContainer__list {
@@ -52,8 +58,8 @@ const CheckoutItemsCardWrapper = styled.article`
       }
 
       .itemContainer__btn {
-        bottom: 280px;
-        left: 100px;
+        bottom: 320px;
+        left: 130px;
       }
     }
   }

@@ -51,8 +51,9 @@ const Card = ({ dataItem }: Props) => {
       <ul key={dataItem.id}>
         <li>
           <Link to={`/products/${dataItem.id}`}>
-            <figure>
-              <img src={dataItem.main_picture_url} alt={dataItem.name} width="180px" />
+            <figure className="img">
+              <img src={dataItem.main_picture_url} alt={dataItem.name} width="180px" className="img__img" />
+              <span className="img__span">{dataItem.nickname}</span>
             </figure>
           </Link>
         </li>

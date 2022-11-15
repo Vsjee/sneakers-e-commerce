@@ -34,7 +34,7 @@ function CheckoutItemsCard({ itemProps, itemCounter }: Props) {
   return (
     <CheckoutItemsCardWrapper>
       <div className="itemContainer">
-        {itemCounter.i + 1}
+        <span className="itemContainer__counter">{itemCounter.i + 1}</span>
         <figure>
           <img src={itemProps.grid_picture_url} alt="sneaker" width={200} />
         </figure>
@@ -44,7 +44,7 @@ function CheckoutItemsCard({ itemProps, itemCounter }: Props) {
           </li>
           <li>Nick: {itemProps.nickname}</li>
           <li>Brand: {itemProps.brand_name}</li>
-          <li>Sixe: {itemProps.size}</li>
+          <li>Size: {itemProps.size}</li>
           <li>Price: ${centsToUsd(Number(itemProps.retail_price_cents))}</li>
         </ul>
         <button
