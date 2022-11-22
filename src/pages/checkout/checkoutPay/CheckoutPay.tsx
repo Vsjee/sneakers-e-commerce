@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import CheckoutPayWrapper from './CheckoutPayWrapper.css';
 
 function CheckoutPay() {
+  const listItems = useSelector((store: ItemProps) => store.cart);
   const itemsCounter = useSelector((store: ItemProps) => store.itemsCounter);
   const totalPrice = useSelector((store: ItemProps) => store.totalPrice);
 
@@ -19,9 +20,11 @@ function CheckoutPay() {
       </div>
       <ul className="pay__info">
         <li>
-          <Button buttonType="primary" className="pay__info--btn">
-            Pay
-          </Button>
+          <Link to={listItems.length !== 0 ? '/checkout/menu' : '/checkout'} className="pay__info__link">
+            <Button buttonType="primary" className="pay__info--btn">
+              Pay
+            </Button>
+          </Link>
         </li>
         <li>
           <Link to={'/products'} className="pay__info__a">

@@ -64,6 +64,10 @@ const CheckoutPayWrapper = styled.article`
       width: 100%;
     }
 
+    .pay__info__link {
+      width: 100%;
+    }
+
     .pay__info--btn {
       display: block;
       margin: 0 auto;
