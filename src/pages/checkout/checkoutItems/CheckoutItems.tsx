@@ -9,7 +9,7 @@ function CheckoutItems() {
   return (
     <CheckoutItemsWrapper>
       {itemsToCheckout.map((item, i) => (
-        <CheckoutItemsCard itemProps={item} itemCounter={{ i }} />
+        <CheckoutItemsCard itemProps={item} key={i} itemCounter={{ i }} />
       ))}
     </CheckoutItemsWrapper>
   );
