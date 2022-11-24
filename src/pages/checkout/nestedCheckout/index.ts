@@ -3,3 +3,4 @@ export { default as NestedCheckoutNavWrapper } from './NestedCheckoutNavWrapper.
 export * from './PaymentShippingMethod';
 export * from './comfirmPayment';
 export * from './shippingAddress';
+export * from './thankForYourPurcharse';

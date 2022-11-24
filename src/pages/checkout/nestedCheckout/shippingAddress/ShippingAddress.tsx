@@ -1,8 +1,10 @@
 import { Button } from '@/components';
-import { useEffect, useRef } from 'react';
+import { itemExistLocalStorage, LoadBtnCheckoutProcess } from '@/utilities';
+import { useEffect, useRef, useState } from 'react';
 import ShippingAddressWrapper from './ShippingAddressWrapper.css';
 
 function ShippingAddress() {
+  const [showBtn, setShowBtn] = useState(false);
   const fullName = useRef<HTMLInputElement>(null);
   const email = useRef<HTMLInputElement>(null);
   const document = useRef<HTMLInputElement>(null);
@@ -23,7 +25,14 @@ function ShippingAddress() {
     houseOrApt: '',
   };
 
-  const toggle = () => {};
+  const toggle = () => {
+    const dataSet = itemExistLocalStorage('shippingData');
+    setShowBtn((prev) => (prev = dataSet));
+  };
+
+  useEffect(() => {
+    console.log(showBtn);
+  }, [showBtn]);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -37,10 +46,6 @@ function ShippingAddress() {
     shippingAddressForm.houseOrApt = houseOrApt.current?.value || '';
     localStorage.setItem('shippingData', JSON.stringify(shippingAddressForm));
   };
-
-  useEffect(() => {
-    console.log(shippingAddressForm);
-  }, [shippingAddressForm]);
 
   return (
     <ShippingAddressWrapper>
@@ -59,10 +64,11 @@ function ShippingAddress() {
           <input ref={address} type="text" name="address" placeholder="Street address" required />
           <input ref={houseOrApt} type="text" name="houseOrApt" placeholder="House, Apt, unit, etc." required />
         </div>
-        <Button buttonType="" type="submit" className="form__submit">
+        <Button buttonType="" type="submit" onClick={toggle} className="form__submit">
           Confirm
         </Button>
       </form>
+      {showBtn !== false ? <LoadBtnCheckoutProcess route={'/checkout/menu/payment&Shipping'} /> : null}
     </ShippingAddressWrapper>
   );
 }

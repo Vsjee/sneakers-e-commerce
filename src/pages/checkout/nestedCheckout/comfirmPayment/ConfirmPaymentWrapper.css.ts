@@ -10,6 +10,10 @@ const ConfirmPaymentWrapper = styled.article`
   h3 {
     width: 100%;
   }
+  .confirmItems {
+    display: inline-flex;
+    justify-content: space-between;
+  }
 
   .container {
     margin: 2rem 0 2rem 0;
@@ -27,12 +31,22 @@ const ConfirmPaymentWrapper = styled.article`
     }
   }
 
+  .item {
+    margin: 3rem 0;
+    list-style: none;
+  }
+
   @media screen and (max-width: 820px) {
     margin-top: 0;
 
     h3 {
       margin: 2rem 175px 0 0;
       text-align: center;
+    }
+
+    .confirmItems {
+      margin: 0;
+      width: 300px;
     }
 
     .container {

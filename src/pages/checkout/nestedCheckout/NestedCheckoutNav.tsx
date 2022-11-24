@@ -1,4 +1,5 @@
 import { Button } from '@/components';
+import { ScrollToTop } from '@/utilities';
 import { useEffect, useState } from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import NestedCheckoutNavWrapper from './NestedCheckoutNavWrapper.css';
@@ -18,16 +19,11 @@ function NestedCheckoutNav() {
 
   return (
     <NestedCheckoutNavWrapper>
+      <ScrollToTop />
       <article className="nav">
-        <Link to={'address'}>
-          <h4>Shipping address</h4>
-        </Link>
-        <Link to={'payment&Shipping'}>
-          <h4>Payment & Shipping</h4>
-        </Link>
-        <Link to={'confirm'}>
-          <h4>Comfirm payment</h4>
-        </Link>
+        <h4>Shipping address</h4>
+        <h4>Payment & Shipping</h4>
+        <h4>Comfirm payment</h4>
       </article>
       <article className="outlet">
         {path === true ? null : (

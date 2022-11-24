@@ -7,3 +7,4 @@ export * from './nestedCheckout/PaymentShippingMethod';
 export * from './nestedCheckout/comfirmPayment';
 export * from './nestedCheckout';
 export * from './nestedCheckout/shippingAddress';
+export * from './nestedCheckout/thankForYourPurcharse';

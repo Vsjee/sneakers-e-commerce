@@ -1,5 +1,7 @@
 import { Button } from '@/components';
-import React, { useEffect, useRef } from 'react';
+import { itemExistLocalStorage } from '@/utilities';
+import { LoadBtnCheckoutProcess } from '@/utilities';
+import React, { useRef, useState } from 'react';
 import PaymentShippingMethodWrapper from './PaymentShippingMethodWrapper.css';
 
 const getShippingData = () => {
@@ -8,6 +10,8 @@ const getShippingData = () => {
 };
 
 function PaymentShippingMethod() {
+  const [showBtn, setShowBtn] = useState(false);
+
   const data = getShippingData();
   const { country, houseOrApt, phone, address } = data;
 
@@ -25,6 +29,11 @@ function PaymentShippingMethod() {
     password: '',
   };
 
+  const toggle = () => {
+    const dataSet = itemExistLocalStorage('paymentShippingData');
+    setShowBtn(dataSet);
+  };
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     paymentAndShippingForm.delivery = delivery.current?.value || '';
@@ -35,10 +44,6 @@ function PaymentShippingMethod() {
     localStorage.setItem('paymentShippingData', JSON.stringify(paymentAndShippingForm));
     console.log(paymentAndShippingForm);
   };
-
-  useEffect(() => {
-    console.log(paymentAndShippingForm);
-  }, [paymentAndShippingForm]);
 
   return (
     <PaymentShippingMethodWrapper>
@@ -80,10 +85,11 @@ function PaymentShippingMethod() {
             <input ref={password} type="password" className="form__payment__password" required placeholder="****" maxLength={4} />
           </div>
         </div>
-        <Button buttonType="" type="submit" className="form__submit">
+        <Button buttonType="" type="submit" onClick={toggle} className="form__submit">
           Confirm
         </Button>
       </form>
+      {showBtn !== false ? <LoadBtnCheckoutProcess route={'/checkout/menu/confirm'} /> : null}
     </PaymentShippingMethodWrapper>
   );
 }

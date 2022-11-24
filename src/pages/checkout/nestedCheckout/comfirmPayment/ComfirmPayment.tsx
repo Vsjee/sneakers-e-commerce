@@ -1,27 +1,20 @@
 import { Button } from '@/components';
+import { ItemProps } from '@/redux/state/cart';
+import { getDataLocalStorage } from '@/utilities';
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import ConfirmPaymentWrapper from './ConfirmPaymentWrapper.css';
-
-const getDataLocalStorage = () => {
-  const shippingAddressData = localStorage.getItem('shippingData');
-  const paymentShippingData = localStorage.getItem('paymentShippingData');
-
-  const shippingData = shippingAddressData !== null ? JSON.parse(shippingAddressData) : null;
-  const paymentData = paymentShippingData !== null ? JSON.parse(paymentShippingData) : null;
-
-  return {
-    shippingData,
-    paymentData,
-  };
-};
+import Item from './listItems/Item';
 
 function ComfirmPayment() {
-  const { shippingData, paymentData } = getDataLocalStorage();
+  const listItems = useSelector((store: ItemProps) => store.cart);
+  const totalPrice = useSelector((store: ItemProps) => store.totalPrice);
+
+  const shippingData = getDataLocalStorage('shippingData');
+  const paymentData = getDataLocalStorage('shippingData');
 
   const { fullName, email, document, phone, country, address, delivery } = shippingData;
   const { cardNumber } = paymentData;
-
-  console.log(shippingData);
-  console.log(paymentData);
 
   return (
     <ConfirmPaymentWrapper>
@@ -45,7 +38,21 @@ function ComfirmPayment() {
           <p>Card number: {cardNumber}</p>
         </div>
       </div>
-      <Button buttonType="primary">Confirm Purcharse</Button>
+      <h3 className="confirmItems">
+        Confirm items <span>${totalPrice}</span>
+      </h3>
+      <ul className={'item'}>
+        {listItems.map((item, i) => {
+          return (
+            <li key={i}>
+              <Item item={item} />
+            </li>
+          );
+        })}
+      </ul>
+      <Link to={'/thanks'}>
+        <Button buttonType="primary">Confirm Purcharse</Button>
+      </Link>
     </ConfirmPaymentWrapper>
   );
 }
