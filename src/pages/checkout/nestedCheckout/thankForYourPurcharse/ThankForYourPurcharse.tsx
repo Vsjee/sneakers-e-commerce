@@ -3,11 +3,24 @@ import { Link } from 'react-router-dom';
 import { GiRunningShoe } from 'react-icons/gi';
 import ThankForYourPurcharseWrapper from './ThankForYourPurcharseWrapper.css';
 import { getDataLocalStorage } from '@/utilities';
+import { removeAllItemsFromCart } from '@/redux/state/cart';
+import { useDispatch } from 'react-redux';
 
 function ThankForYourPurcharse() {
+  const dispatch = useDispatch();
+
   const deleteDataLocalStorage = () => {
     localStorage.removeItem('shippingData');
     localStorage.removeItem('paymentShippingData');
+  };
+
+  const deleteGlobalStates = () => {
+    dispatch(removeAllItemsFromCart());
+  };
+
+  const deleteAllData = () => {
+    deleteDataLocalStorage();
+    deleteGlobalStates();
   };
 
   const data = getDataLocalStorage('shippingData');
@@ -19,7 +32,7 @@ function ThankForYourPurcharse() {
       <h2>your purcharse will arrive soon...</h2>
       <GiRunningShoe className="icon" />
       <Link to={'/products'}>
-        <Button buttonType="primary" onClick={deleteDataLocalStorage}>
+        <Button buttonType="primary" onClick={deleteAllData}>
           Back to shop
         </Button>
       </Link>

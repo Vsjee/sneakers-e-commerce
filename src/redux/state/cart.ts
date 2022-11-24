@@ -52,7 +52,19 @@ export const cartSlice = createSlice({
     totalPriceCartDecrement: (state, actions) => {
       state.totalPrice -= actions.payload.price;
     },
+    removeAllItemsFromCart: (state) => {
+      state.cart = [];
+      state.itemsCounter = 0;
+      state.totalPrice = 0;
+    },
   },
 });
 
-export const { addItemToCart, removeItemFormCart, itemsCartCounter, totalPriceCartIncrement, totalPriceCartDecrement } = cartSlice.actions;
+export const {
+  addItemToCart,
+  removeItemFormCart,
+  itemsCartCounter,
+  totalPriceCartIncrement,
+  totalPriceCartDecrement,
+  removeAllItemsFromCart,
+} = cartSlice.actions;
