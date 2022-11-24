@@ -27,7 +27,7 @@ function ShippingAddress() {
 
   const toggle = () => {
     const dataSet = itemExistLocalStorage('shippingData');
-    setShowBtn((prev) => (prev = dataSet));
+    setShowBtn(dataSet);
   };
 
   useEffect(() => {
@@ -67,8 +67,12 @@ function ShippingAddress() {
         <Button buttonType="" type="submit" onClick={toggle} className="form__submit">
           Confirm
         </Button>
+        {showBtn !== false ? (
+          <div className="btn__container">
+            <LoadBtnCheckoutProcess route={'/checkout/menu/payment&Shipping'} />
+          </div>
+        ) : null}
       </form>
-      {showBtn !== false ? <LoadBtnCheckoutProcess route={'/checkout/menu/payment&Shipping'} /> : null}
     </ShippingAddressWrapper>
   );
 }

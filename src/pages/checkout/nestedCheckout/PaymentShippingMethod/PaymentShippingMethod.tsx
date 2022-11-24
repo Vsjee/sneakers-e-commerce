@@ -88,8 +88,12 @@ function PaymentShippingMethod() {
         <Button buttonType="" type="submit" onClick={toggle} className="form__submit">
           Confirm
         </Button>
+        {showBtn !== false ? (
+          <div className="btn__container">
+            <LoadBtnCheckoutProcess route={'/checkout/menu/confirm'} />
+          </div>
+        ) : null}
       </form>
-      {showBtn !== false ? <LoadBtnCheckoutProcess route={'/checkout/menu/confirm'} /> : null}
     </PaymentShippingMethodWrapper>
   );
 }

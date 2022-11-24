@@ -6,6 +6,7 @@ const ShippingAddressWrapper = styled.article`
     flex-direction: row;
     justify-content: space-evenly;
     margin-top: 1rem;
+    margin-bottom: 5rem;
 
     .form__submit {
       cursor: pointer;
@@ -14,6 +15,15 @@ const ShippingAddressWrapper = styled.article`
       height: 40px;
       width: 120px;
       top: 600px;
+    }
+
+    .btn__container {
+      cursor: pointer;
+      position: absolute;
+      padding: 0.5rem;
+      height: 40px;
+      width: 120px;
+      top: 650px;
     }
   }
 
@@ -54,6 +64,12 @@ const ShippingAddressWrapper = styled.article`
         position: relative;
         top: 0;
         margin: 2rem 0 0 0;
+      }
+
+      .btn__container {
+        position: relative;
+        top: 0;
+        margin: 1rem 0 0 0;
       }
     }
 

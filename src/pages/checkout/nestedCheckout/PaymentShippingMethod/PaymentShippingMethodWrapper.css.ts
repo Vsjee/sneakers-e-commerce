@@ -6,6 +6,7 @@ const PaymentShippingMethodWrapper = styled.article`
     margin: 1rem 0 0 0;
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 5rem;
 
     .form__submit {
       cursor: pointer;
@@ -14,6 +15,15 @@ const PaymentShippingMethodWrapper = styled.article`
       height: 40px;
       width: 120px;
       top: 500px;
+    }
+
+    .btn__container {
+      cursor: pointer;
+      position: absolute;
+      padding: 0.5rem;
+      height: 40px;
+      width: 120px;
+      top: 550px;
     }
   }
 
@@ -95,6 +105,10 @@ const PaymentShippingMethodWrapper = styled.article`
 
       .form__submit {
         top: 730px;
+      }
+
+      .btn__container {
+        top: 780px;
       }
     }
 
