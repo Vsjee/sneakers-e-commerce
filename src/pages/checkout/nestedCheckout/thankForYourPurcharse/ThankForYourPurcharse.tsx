@@ -23,7 +23,7 @@ function ThankForYourPurcharse() {
     deleteGlobalStates();
   };
 
-  const data = getDataLocalStorage('shippingData');
+  const data: { fullName: string } = getDataLocalStorage('shippingData');
 
   return (
     <ThankForYourPurcharseWrapper>

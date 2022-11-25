@@ -7,7 +7,7 @@ import myStore from './redux/store';
 import { RoutesWithNotFound } from './utilities';
 import { PersistGate } from 'redux-persist/integration/react';
 import persistStore from 'redux-persist/es/persistStore';
-import { ComfirmPayment, PaymentShippingMethod, ShippingAddress, ThankForYourPurcharse } from './pages';
+// import { ComfirmPayment, PaymentShippingMethod, ShippingAddress } from './pages';
 
 const HomePage = lazy(() => import('./pages/home/HomePage'));
 const Products = lazy(() => import('./pages/products/Products'));
@@ -16,6 +16,12 @@ const About = lazy(() => import('./pages/about/About'));
 const Contact = lazy(() => import('./pages/Contact/Contact'));
 const Checkout = lazy(() => import('./pages/checkout/Checkout'));
 const NestedCheckoutNav = lazy(() => import('./pages/checkout/nestedCheckout/NestedCheckoutNav'));
+
+const ShippingAddress = lazy(() => import('./pages/checkout/nestedCheckout/shippingAddress/ShippingAddress'));
+const PaymentShippingMethod = lazy(() => import('./pages/checkout/nestedCheckout/PaymentShippingMethod/PaymentShippingMethod'));
+const ComfirmPayment = lazy(() => import('./pages/checkout/nestedCheckout/comfirmPayment/ComfirmPayment'));
+
+const ThankForYourPurcharse = lazy(() => import('./pages/checkout/nestedCheckout/thankForYourPurcharse/ThankForYourPurcharse'));
 
 const persistor = persistStore(myStore);
 
